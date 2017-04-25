@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for node-npmtest-tap/node_modules/tap/lib/stack.js</title>
+    <title>Code coverage report for node-npmtest-tap/node_modules/tap/bin/mochatap.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -190,27 +190,27 @@
     </style>
 </head>
 <body>
-<div class="header high">
+<div class="header low">
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-tap">npmtest-tap (v0.0.2)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-tap/node_modules/tap/lib/stack.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-tap/node_modules/tap/bin/mochatap.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">100% <small>(9 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">44.44% <small>(4 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">40% <small>(2 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">50% <small>(1 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">100% <small>(9 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">44.44% <small>(4 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-tap/node_modules/tap/lib/</a> &#187; stack.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-tap/node_modules/tap/bin/</a> &#187; mochatap.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -229,83 +229,41 @@
 13
 14
 15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">1</span>
+16</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">3</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var sourceMapSupport = require('source-map-support')
-var StackUtils = require('stack-utils')
-var path = require('path')
-var tapDir = path.resolve(__dirname, '..')
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//#!/usr/bin/env node
+var tap = require('../lib/tap.js')
+var args = process.argv.slice(2)
 &nbsp;
-// don't skip when developing on tap itself
-var skip = process.cwd() !== tapDir ||
-<span class="branch-1 cbranch-no" title="branch not covered" >  +process.env.TAP_DEV_SHORTSTACK === 1 </span>&amp;&amp;
-<span class="branch-2 cbranch-no" title="branch not covered" >  +process.env.TAP_DEV_LONGSTACK !== 1</span>
-? [
-    /node_modules[\/\\]tap[\/\\]/,
-    new RegExp(resc(tapDir) + '\\b', 'i'),
-    new RegExp(resc(require.resolve('function-loop'))),
-    new RegExp(resc(path.dirname(require.resolve('bluebird/package.json'))))
-  ]
-: <span class="branch-1 cbranch-no" title="branch not covered" >[]</span>
-&nbsp;
-sourceMapSupport.install({environment:'node'})
-// Ignore tap if it's a dependency, or anything
-// in this lib folder.
-module.exports = new StackUtils({
-  internals: StackUtils.nodeInternals().concat(skip),
-  wrapCallSite: sourceMapSupport.wrapCallSite
-})
-&nbsp;
-function resc(str) {
-  return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&amp;');
+<span class="missing-if-branch" title="if path not taken" >I</span>if (args.length === 1) {
+<span class="cstat-no" title="statement not covered" >  var path = require('path')</span>
+<span class="cstat-no" title="statement not covered" >  var file = path.resolve(args[0])</span>
+<span class="cstat-no" title="statement not covered" >  tap.mochaGlobals()</span>
+<span class="cstat-no" title="statement not covered" >  require(file)</span>
+} else {
+  for (var i = 0; i &lt; args.length; i++) {
+<span class="cstat-no" title="statement not covered" >    tap.spawn(process.execPath, [__filename, args[i]])</span>
+  }
 }
 &nbsp;
 &nbsp;</pre></td></tr>
 </table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 17:40:55 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 25 2017 19:26:59 GMT+0000 (UTC)</div>
 </div>
 </body>
 </html>
