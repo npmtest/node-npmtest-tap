@@ -1,6 +1,6 @@
 # npmtest-tap
 
-#### test coverage for  [tap (v10.3.2)](http://node-tap.org/)  [![npm package](https://img.shields.io/npm/v/npmtest-tap.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-tap) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-tap.svg)](https://travis-ci.org/npmtest/node-npmtest-tap)
+#### basic test coverage for  [tap (v10.3.2)](http://node-tap.org/)  [![npm package](https://img.shields.io/npm/v/npmtest-tap.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-tap) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-tap.svg)](https://travis-ci.org/npmtest/node-npmtest-tap)
 
 #### A Test-Anything-Protocol library
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-tap/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-tap/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-tap/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-tap/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-tap/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-tap/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-tap/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-tap/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-tap/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-tap/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-tap/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-tap/build/coverage.html/index.html)
 
